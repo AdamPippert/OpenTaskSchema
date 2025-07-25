@@ -1,6 +1,7 @@
 {
   "$defs": {
     "JothTask": {
+      "additionalProperties": true,
       "properties": {
         "id": {
           "description": "Unique task identifier",
@@ -195,5 +196,9 @@
       "type": "object"
     }
   },
-  "$ref": "#/$defs/JothTask"
+  "$ref": "#/$defs/JothTask",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AdamPippert/JOTH",
+  "title": "JOTH Task Schema",
+  "version": "0.0.1"
 }
