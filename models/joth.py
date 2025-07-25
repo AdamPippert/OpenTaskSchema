@@ -60,3 +60,6 @@ class JothTask(BaseModel):
         description="Labels for categorization"
     )
     
+    model_config = {
+        "extra": "allow"
+    }
