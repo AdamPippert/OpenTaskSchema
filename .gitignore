@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Editor and OS files
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+
+# Test and coverage outputs
+.coverage
+htmlcov/
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# VS Code settings
+.vscode/
