@@ -8,5 +8,5 @@ schema["$id"] = "https://github.com/AdamPippert/OpenTaskSchema"
 schema["title"] = "Open Task Schema"
 schema["version"] = "0.2.0"
 
-with open('ots.json', 'w') as f:
+with open('open_task_schema.json', 'w') as f:
     json.dump(schema, f, indent=2)
