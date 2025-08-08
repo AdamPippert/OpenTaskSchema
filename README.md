@@ -1,9 +1,9 @@
 
-# **JSON Open Task Hierarchy (JOTH) - v0.1 Proposal**
+# **Open Task Schema (OTS) - v0.2 Proposal**
 
 ## Overview
 
-The JSON Open Task Hierarchy (JOTH) is a flexible schema for representing task hierarchies, supporting diverse 
+The Open Task Schema (OTS) is a flexible schema for representing task hierarchies, supporting diverse 
 use cases across industries and projects. JOTH enables interoperability by providing a common language for 
 describing tasks, their dependencies, and associated metadata. This document outlines the proposed structure of 
 JOTH v0.1, along with examples and guidelines for implementation.
