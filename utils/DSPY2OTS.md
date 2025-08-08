@@ -1,4 +1,4 @@
-DSPy2JOTH script - convert a set of tasks defined in a .dspy file to a decomposed JOTH object
+DSPy2OTS script - convert a set of tasks defined in a .dspy file to a decomposed OTS object
 
 ## Instructions:
 
@@ -16,5 +16,5 @@ content, replacing `your_api_key` with your actual OpenAI API key:
 task on a separate line, starting with "Task" followed by an ID and title separated by a colon (`Task <ID>: 
 <Title>`).
 
-4. **Run the script**: Execute `python dspy2joth.py` in your terminal or command prompt to generate the JOTH 
-file named `reasoning_questions_joth.json`.
+4. **Run the script**: Execute `python dspy2ots.py` in your terminal or command prompt to generate the OTS 
+file named `reasoning_questions_ots.json`.

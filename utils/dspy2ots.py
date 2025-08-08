@@ -21,8 +21,8 @@ def get_subtasks(prompt):
     return response.choices[0].text.strip().split("\n")
 
 
-def dspy2joth(dspy_file):
-    """Converts a .dspy file into JOTH format."""
+def dspy2ots(dspy_file):
+    """Converts a .dspy file into OTS format."""
 
     tasks = []
 
@@ -43,9 +43,9 @@ def dspy2joth(dspy_file):
 
 if __name__ == "__main__":
     dspy_file = "reasoning_questions.dspy"  # Update this with your .dspy file path
-    joth_data = dspy2joth(dspy_file)
+    ots_data = dspy2ots(dspy_file)
 
-    with open("reasoning_questions_joth.json", "w") as f:
-        json.dump(joth_data, f, indent=4)
+    with open("reasoning_questions_ots.json", "w") as f:
+        json.dump(ots_data, f, indent=4)
 
-    print(f"Converted {dspy_file} to JOTH format and saved as reasoning_questions_joth.json")
+    print(f"Converted {dspy_file} to OTS format and saved as reasoning_questions_ots.json")

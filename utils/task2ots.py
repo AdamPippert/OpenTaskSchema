@@ -4,6 +4,7 @@ updated with a more recent model"""
 import json
 from dotenv import load_dotenv
 import openai
+import os
 
 
 load_dotenv()  # Load environment variables from .env file
@@ -24,8 +25,8 @@ def get_subtasks(prompt):
     return response.choices[0].text.strip().split("\n")
 
 
-def task_to_joth(task_description):
-    """Converts a natural language description into JOTH format."""
+def task_to_ots(task_description):
+    """Converts a natural language description into OTS format."""
 
     title = "Task Description"
 
@@ -40,9 +41,9 @@ def task_to_joth(task_description):
 
 if __name__ == "__main__":
     task_description = input("Enter a natural language description of the complex task: ")
-    joth_data = task_to_joth(task_description)
+    ots_data = task_to_ots(task_description)
 
-    with open("task_joth.json", "w") as f:
-        json.dump(joth_data, f, indent=4)
+    with open("task_ots.json", "w") as f:
+        json.dump(ots_data, f, indent=4)
 
-    print(f"Converted task description to JOTH format and saved as task_joth.json")
+    print(f"Converted task description to OTS format and saved as task_ots.json")
