@@ -4,9 +4,9 @@
 ## Overview
 
 The Open Task Schema (OTS) is a flexible schema for representing task hierarchies, supporting diverse 
-use cases across industries and projects. JOTH enables interoperability by providing a common language for 
+use cases across industries and projects. OTS enables interoperability by providing a common language for 
 describing tasks, their dependencies, and associated metadata. This document outlines the proposed structure of 
-JOTH v0.1, along with examples and guidelines for implementation.
+OTS v0.1, along with examples and guidelines for implementation.
 
 ### Key Features
 
@@ -19,7 +19,7 @@ timestamps, and artifact attachments to enhance task representation.
 - **Interoperability**: Define a standardized JSON format that can be easily consumed and produced by different 
 systems and platforms.
 
-## JOTH Schema Structure
+## OTS Schema Structure
 
 ### Core Elements
 
@@ -47,10 +47,10 @@ completed.
 
 ## Example Usage with Interoperability Testing
 
-In addition to demonstrating the structure and flexibility of JOTH, it's essential to showcase how to perform 
+In addition to demonstrating the structure and flexibility of OTS, it's essential to showcase how to perform 
 interoperable operations like updating task statuses. Below is a step-by-step example using Python, leveraging 
 the `pydantic` library for data modeling and `requests` for HTTP interactions. This example assumes you have an 
-API endpoint that accepts JSON payloads conforming to the JOTH schema for updating tasks.
+API endpoint that accepts JSON payloads conforming to the OTS schema for updating tasks.
 
 ### Prerequisites
 
@@ -62,7 +62,7 @@ API endpoint that accepts JSON payloads conforming to the JOTH schema for updati
 
 2. Ensure you have access to a server with the following endpoints (replace placeholders with actual URLs and 
 tokens):
-   - `PUT /tasks/{task_id}`: Update a task's status, expected in JSON format conforming to JOTH.
+   - `PUT /tasks/{task_id}`: Update a task's status, expected in JSON format conforming to OTS.
    - `GET /tasks/{task_id}`: Retrieve a task by ID, useful for fetching current states before updating.
 
 ### Example Code: Updating Task Status
@@ -75,11 +75,11 @@ from pydantic import BaseModel
 import requests
 
 
-# Define JOTH Task Model
-class JothTask(BaseModel):
+# Define OTS Task Model
+class OtsTask(BaseModel):
     id: str
     description: str
-    type: str = None  # Optional, as per JOTH schema
+    type: str = None  # Optional, as per OTS schema
     status: str
     dependencies: list = []
     children: list = []
@@ -91,14 +91,14 @@ class JothTask(BaseModel):
 
 
 # Example task data
-task = JothTask(
+task = OtsTask(
     id="12345",
     description="Implement user authentication",
     type="story",
     status="inprogress",
     dependencies=["67890"],  # Dependency on another task
     children=[
-        JothTask(id="54321", description="Set up database schema")
+        OtsTask(id="54321", description="Set up database schema")
     ],
     artifacts={"documentation_link": "https://example.com/docs"}
 )
