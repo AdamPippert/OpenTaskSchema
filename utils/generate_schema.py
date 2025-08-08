@@ -1,12 +1,12 @@
-from models.joth import JothTask
+from models.ots import OtsTask
 import json
 
-schema = JothTask.model_json_schema()
+schema = OtsTask.model_json_schema()
 
 schema["$schema"] = "https://json-schema.org/draft/2020-12/schema"
-schema["$id"] = "https://github.com/AdamPippert/JOTH"
-schema["title"] = "JOTH Task Schema"
-schema["version"] = "0.0.1"
+schema["$id"] = "https://github.com/AdamPippert/OpenTaskSchema"
+schema["title"] = "Open Task Schema"
+schema["version"] = "0.2.0"
 
-with open('joth_schema.json', 'w') as f:
+with open('ots.json', 'w') as f:
     json.dump(schema, f, indent=2)
