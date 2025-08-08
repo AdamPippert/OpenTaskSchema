@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 
-class JothTask(BaseModel):
+class OtsTask(BaseModel):
     id: str = Field(
         ..., 
         description="Unique task identifier"
@@ -23,7 +23,7 @@ class JothTask(BaseModel):
         default=None,
         description="Tasks this task depends on"
     )
-    children: Optional[List["JothTask"]] = Field(
+    children: Optional[List["OtsTask"]] = Field(
         default=None,
         description="Nested subtasks"
     )
