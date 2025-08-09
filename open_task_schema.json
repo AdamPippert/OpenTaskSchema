@@ -1,6 +1,6 @@
 {
   "$defs": {
-    "JothTask": {
+    "OtsTask": {
       "additionalProperties": true,
       "properties": {
         "id": {
@@ -66,7 +66,7 @@
           "anyOf": [
             {
               "items": {
-                "$ref": "#/$defs/JothTask"
+                "$ref": "#/$defs/OtsTask"
               },
               "type": "array"
             },
@@ -192,13 +192,13 @@
         "id",
         "description"
       ],
-      "title": "JothTask",
+      "title": "OtsTask",
       "type": "object"
     }
   },
-  "$ref": "#/$defs/JothTask",
+  "$ref": "#/$defs/OtsTask",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AdamPippert/JOTH",
-  "title": "JOTH Task Schema",
-  "version": "0.0.1"
+  "$id": "https://github.com/AdamPippert/OpenTaskSchema",
+  "title": "Open Task Schema",
+  "version": "0.2.0"
 }
